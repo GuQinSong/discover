@@ -19,9 +19,9 @@ public class PdfDiscover {
     PDFTextStripperByArea stripper = new PDFTextStripperByArea();
     PDPage page = pdf.getPage(25);
     System.out.println("page:" + page.getMediaBox().toString());
-    stripper.addRegion("header", new Rectangle2D.Double(0, 0, 595.22, 60));
-    stripper.addRegion("title", new Rectangle2D.Double(0, 60, 595.22, 70));
-    stripper.addRegion("content", new Rectangle2D.Double(0, 150, 595.22, 760));
+    stripper.addRegion("header", new Rectangle2D.Double(0, 0, 595.22, 55));
+    stripper.addRegion("title", new Rectangle2D.Double(0, 55, 595.22, 60));
+    stripper.addRegion("content", new Rectangle2D.Double(0, 70, 595.22, 760));
     stripper.addRegion("footer", new Rectangle2D.Double(0, 762, 595.22, 80));
     stripper.extractRegions(page);
     System.out.println(stripper.getTextForRegion("header"));
